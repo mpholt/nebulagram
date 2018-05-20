@@ -70,7 +70,8 @@ function onReadClick() {
 
         document.getElementById("readResult").style.visibility = "visible";
     }).catch(function (err) {
-        //cbSearch(err)
-        console.log("error:" + err.message)
+        document.getElementById('retrievedMessage').value = err.message;
+
+        document.getElementById("readResult").style.visibility = "visible";
     })
 }
