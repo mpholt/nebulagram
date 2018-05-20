@@ -4,6 +4,12 @@ var serialNumber;
 var dappAddress = "n1shwQ4f7yg4HT23fFGzBGmFjixwbKn47eo"; // mainnet contract address
 //var dappAddress = "n1xjqJ4q3FkFnGD2zuJMAdfK1CLpJzuNvvt";
 
+function checkIfWalletInstalled() {
+    if(typeof(webExtensionWallet) === "undefined") {
+        alert ("Nebulas Wallet Extension required. Please see the \"Get Free NAS\" section on the page to install the wallet.")
+    }
+}
+
 function onSendClick() {
     if(typeof(webExtensionWallet) === "undefined") {
         alert ("Nebulas Wallet Extension required. Please see the \"Get Free NAS\" section on the page to install the wallet.")

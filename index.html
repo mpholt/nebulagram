@@ -90,13 +90,13 @@
                       placeholder="Destination Wallet"
                       id="sendTo"
                       type="text"
-                      value="n1SaLvGJenzK18WRUdjJCNMbecHQ8X4rq5e">
+                      value="n1SaLvGJenzK18WRUdjJCNMbecHQ8X4rq5e" onclick="checkIfWalletInstalled();">
                   </div>
                   <div class="col-lg-4 col-md-12 col-sm-12 pb-2 mx-auto"> <input
                       class="form-control form-control-lg border-0 rounded-0"
                       placeholder="Message"
                       id="sendMessage"
-                      type="text">
+                      type="text" onclick="checkIfWalletInstalled();">
                   </div>
                   <div class="col-lg-4 col-md-12 col-sm-12 pb-2 mx-auto mr-lg-auto ml-lg-0">
                     <button class="btn btn-warning w-100 btn-lg border-0 rounded-0"
@@ -106,7 +106,7 @@
                 </div>
               </form>
             </div>
-            <p class="small" style="opacity: 0.5;">The Nebulas <a href="https://github.com/ChengOrangeJu/WebExtensionWallet"
+            <p class="small" style="opacity: 0.5;">The Nebulas <a href="https://github.com/ChengOrangeJu/WebExtensionWallet" target="_blank"
                 style="color: black">Web
                 Extension Wallet</a> is required. Small amount of NAS required for sending.</p>
             <ul class="list-inline mt-4">
@@ -124,10 +124,9 @@
       <div class="container" id="freenas">
         <div class="row py-0">
           <div class="col-lg-12 col-md-12 mx-auto d-flex justify-content-between flex-column flex-lg-row flex-xl-row">
-            <p style="margin: 0.0px 0.0px 0.0px 0.0px"><font style="font: 39.2px 'Avenir Next'; color: #4a4a4a"
+            <p style="margin: 0.0px 0.0px 0.0px 0.0px"><font style="font: 39.2px; color: #4a4a4a"
                 size="7"
-                color="#4a4a4a"
-                face="Avenir Next"><b>Why
+                color="#4a4a4a"><b>Why
                   Nebulus?</b></font></p>
           </div>
         </div>
@@ -163,10 +162,9 @@
       <div class="container">
         <div class="row py-0">
           <div class="col-lg-12 col-md-12 mx-auto d-flex justify-content-between flex-column flex-lg-row flex-xl-row">
-            <p style="margin: 0.0px 0.0px 0.0px 0.0px"><font style="font: 39.2px 'Avenir Next'; color: #4a4a4a"
+            <p style="margin: 0.0px 0.0px 0.0px 0.0px"><font style="font: 39.2px; color: #4a4a4a"
                 size="7"
-                color="#4a4a4a"
-                face="Avenir Next"><b>Free
+                color="#4a4a4a"><b>Free
                   Nebulus<br>
                 </b></font></p>
           </div>
@@ -261,7 +259,7 @@ Free
               <h2 class="display-4 mb-4">About this DApp</h2>
               <p class="lead mb-5 text-secondary">Nebulagram's are sent to a
                 Nebulas smartcontract that stores the message on the blockchain.
-                It's fast, reliable, and an straightforward example of
+                It's fast, reliable, and a straightforward example of a
                 storage-based Nebulas smart-contract and DApp. <br>
                 <br>
                 This DApp was meant to educate as much as it is meant to send
@@ -310,8 +308,8 @@ Free
         });
       
       if(typeof(webExtensionWallet) === "undefined"){
-        document.getElementById("sendTo").disabled = true;
-        document.getElementById("sendMessage").disabled = true;
+        document.getElementById("sendTo").enabled = true;
+        document.getElementById("sendMessage").enabled = true;
       }
 
 
