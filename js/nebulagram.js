@@ -1,7 +1,8 @@
 var NebPay = require("nebpay");
 var nebPay = new NebPay();
 var serialNumber;
-var dappAddress = "n1xjqJ4q3FkFnGD2zuJMAdfK1CLpJzuNvvt";
+var dappAddress = "n1shwQ4f7yg4HT23fFGzBGmFjixwbKn47eo"; // mainnet contract address
+//var dappAddress = "n1xjqJ4q3FkFnGD2zuJMAdfK1CLpJzuNvvt";
 
 function onSendClick() {
     if(typeof(webExtensionWallet) === "undefined") {
@@ -39,7 +40,8 @@ function displayTransaction(resp) {
 function onViewTransactionClick() {
     var transaction = document.getElementById("transaction").value;
 
-    var url = "https://explorer.nebulas.io/#/testnet/tx/" +transaction;
+    var url = "https://explorer.nebulas.io/#/tx/" +transaction;
+//    var url = "https://explorer.nebulas.io/#/testnet/tx/" +transaction;
 
     window.open(url,'_blank')
 }
@@ -47,7 +49,8 @@ function onViewTransactionClick() {
 var nebulas = require("nebulas"),
     Account = nebulas.Account,
     neb = new nebulas.Neb();
-    neb.setRequest(new nebulas.HttpRequest("https://testnet.nebulas.io"));
+    neb.setRequest(new nebulas.HttpRequest("https://mainnet.nebulas.io"));
+//    neb.setRequest(new nebulas.HttpRequest("https://testnet.nebulas.io"));
 
 function onReadClick() {
     var from = document.getElementById("fromAddress").value;
